@@ -14,7 +14,7 @@ pipeline:
       - curl -fL https://getcli.jfrog.io | sh
       - echo $ARTIFACTORY_USER
       - echo $ARTIFACTORY_PASSWORD    
-      - ./jfrog rt config --url=arti_url --user=arti_user --password=arti_pass
+      - ./jfrog rt config --url=$arti_url --user=$arti_user --password=$arti_pass
       - ./jfrog rt c show
       - export M2_HOME=/usr/share/maven
       - sed -i 's,MAVEN_REPO_KEY,'"$MAVEN_REPO_KEY"',g' configuration.yml
