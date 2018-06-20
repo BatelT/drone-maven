@@ -1,11 +1,11 @@
 pipeline:
   build:
     image: maven
+    environment:
+      - ARTIFACTORY_URL="https://batelt.jfrog.io/batelt"
+      - ARTIFACTORY_USER="new"
+      - ARTIFACTORY_PASS="BP$$word"
     commands:
       - curl -fL https://getcli.jfrog.io | sh
       - ./jfrog rt config --url=$ARTIFACTORY_URL --user=$ARTIFACTORY_USER --password=$ARTIFACTORY_PASS
       - ./jfrog rt c show
-     environment
-     - ARTIFACTORY_URL="https://batelt.jfrog.io/batelt"
-     - ARTIFACTORY_USER="new"
-     - ARTIFACTORY_PASS="BP$$word"
