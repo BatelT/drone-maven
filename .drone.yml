@@ -3,8 +3,8 @@ pipeline:
     image: maven
     environment:
       - ARTIFACTORY_URL="https://batelt.jfrog.io/batelt"
-      - ARTIFACTORY_USER="new"
-      - ARTIFACTORY_PASS="BP$$word"
+      - ARTIFACTORY_USER="bateldrone"
+      - ARTIFACTORY_PASS="drone2018"
     commands:
       - curl -fL https://getcli.jfrog.io | sh
       - echo $ARTIFACTORY_USER
