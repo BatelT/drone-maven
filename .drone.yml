@@ -6,7 +6,6 @@ pipeline:
     secrets: [ ARTIFACTORY_URL, ARTIFACTORY_USER,ARTIFACTORY_PASS ]
     commands:
       - curl -fL https://getcli.jfrog.io | sh
-      secrets: [ ARTIFACTORY_URL, ARTIFACTORY_USER,ARTIFACTORY_PASS ]
       - echo $ARTIFACTORY_USER
       - echo $ARTIFACTORY_PASSWORD    
       - ./jfrog rt config --url=$ARTIFACTORY_URL --user=$ARTIFACTORY_USER --password=$ARTIFACTORY_PASS
