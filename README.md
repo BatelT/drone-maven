@@ -1,6 +1,6 @@
-# Integrating JFrog Artifactory with GitLab CI using JFrog CLI
+# Integrating JFrog Artifactory with Drone CI using JFrog CLI
 ## Store artifacts and build information to Artifactory
-### Follow this step-by-step workflow to Integrate GitLab CI with Artifactory.
+### Follow this step-by-step workflow to Integrate Drone with Artifactory.
 This sample project resolves dependencies from Artifactory and deploys the build artifacts to Artifactory.
 #### Prerequisite
 Artifactory Pro / Artifactory SAAS  
