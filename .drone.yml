@@ -9,7 +9,7 @@ pipeline:
       - echo $ARTIFACTORY_PASSWORD    
       - echo $ARTIFACTORY_URL    
       - ./jfrog rt config --url=${ARTIFACTORY_URL} --user=${ARTIFACTORY_USER} --password=${ARTIFACTORY_PASS}
-        secrets: [ ARTIFACTORY_USER, ARTIFACTORY_PASSWORD, ARTIFACTORY_URL ]  
+       secrets: [ ARTIFACTORY_USER, ARTIFACTORY_PASSWORD, ARTIFACTORY_URL ]  
       - ./jfrog rt c show
       - export M2_HOME=/usr/share/maven
       - sed -i 's,MAVEN_REPO_KEY,'"$MAVEN_REPO_KEY"',g' configuration.yml
