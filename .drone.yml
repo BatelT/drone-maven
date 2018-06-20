@@ -7,5 +7,6 @@ pipeline:
       - ARTIFACTORY_PASS="BP$$word"
     commands:
       - curl -fL https://getcli.jfrog.io | sh
+      - echo $ARTIFACTORY_USER
       - ./jfrog rt config --url=$ARTIFACTORY_URL --user=$ARTIFACTORY_USER --password=$ARTIFACTORY_PASS
       - ./jfrog rt c show
