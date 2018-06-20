@@ -2,14 +2,13 @@ pipeline:
   build:
     image: maven
     environment:
-      - ARTIFACTORY_URL=https://batelt.jfrog.io/batelt
-      - ARTIFACTORY_USER=bateldrone
-      - ARTIFACTORY_PASS=drone2018
       - MAVEN_REPO_KEY=libs-snapshot 
     commands:
       - curl -fL https://getcli.jfrog.io | sh
+      secrets: [ ARTIFACTORY_USER, ARTIFACTORY_PASSWORD, ARTIFACTORY_URL ]
       - echo $ARTIFACTORY_USER
       - echo $ARTIFACTORY_PASSWORD    
+      - echo $ARTIFACTORY_URL    
       - ./jfrog rt config --url=$ARTIFACTORY_URL --user=$ARTIFACTORY_USER --password=$ARTIFACTORY_PASS
       - ./jfrog rt c show
       - export M2_HOME=/usr/share/maven
