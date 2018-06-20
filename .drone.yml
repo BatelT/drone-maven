@@ -8,6 +8,6 @@ pipeline:
       - export M2_HOME=/usr/share/maven
      environment
      - ARTIFACTORY_URL="https://batelt.jfrog.io/batelt"
-     - ARTIFACTORY_USER="admin"
-     - ARTIFACTORY_PASS="Rr21101991"
+     - ARTIFACTORY_USER="new"
+     - ARTIFACTORY_PASS="BP$$word"
 
