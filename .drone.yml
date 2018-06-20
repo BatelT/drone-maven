@@ -12,8 +12,8 @@ pipeline:
       - arti_url: artifactory_url
     commands:
       - curl -fL https://getcli.jfrog.io | sh
-      - echo $arti_user
-      - echo $arti_pass    
+      - echo arti_user
+      - echo arti_pass    
       - ./jfrog rt config --url=$arti_url --user=$arti_user --password=$arti_pass
       - ./jfrog rt c show
       - export M2_HOME=/usr/share/maven
