@@ -3,12 +3,12 @@ pipeline:
     image: maven
     environment:
       - MAVEN_REPO_KEY=libs-snapshot 
+    secrets: [ ARTIFACTORY_USER, ARTIFACTORY_PASSWORD, ARTIFACTORY_URL ]
     commands:
       - curl -fL https://getcli.jfrog.io | sh
       - echo $ARTIFACTORY_USER
       - echo $ARTIFACTORY_PASSWORD    
       - echo $ARTIFACTORY_URL    
-     secrets: [ ARTIFACTORY_USER, ARTIFACTORY_PASSWORD, ARTIFACTORY_URL ]
       - ./jfrog rt config --url=$ARTIFACTORY_URL --user=$ARTIFACTORY_USER --password=$ARTIFACTORY_PASS
       - ./jfrog rt c show
       - export M2_HOME=/usr/share/maven
