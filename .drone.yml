@@ -6,11 +6,8 @@ pipeline:
       - MAVEN_REPO_KEY=libs-snapshot 
     secrets: [ artifactory_password, ARTIFACTORY_USER ]
     commands:
-      - echo $ARTIFACTORY_USER
       - curl -fL https://getcli.jfrog.io | sh
-      - echo $ARTIFACTORY_USER
-      - echo $ARTIFACTORY_PASSWORD    
-      - ./jfrog rt config --url=$ARTIFACTORY_URL --user=$ARTIFACTORY_USER --password=$ARTIFACTORY_PASS
+      - ./jfrog rt config --url=$ARTIFACTORY_URL --user=$ARTIFACTORY_USER --password=$ARTIFACTORY_PASSWORD
       - ./jfrog rt c show
       - export M2_HOME=/usr/share/maven
       - sed -i 's,MAVEN_REPO_KEY,'"$MAVEN_REPO_KEY"',g' configuration.yml
