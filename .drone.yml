@@ -6,7 +6,7 @@ pipeline:
       - MAVEN_REPO_KEY=libs-snapshot 
     secrets: [ artifactory_password, art-user ]
     commands:
-      - echo $arti_user
+      - echo $ART-USER
       - curl -fL https://getcli.jfrog.io | sh
       - echo $arti_user
       - echo $ARTIFACTORY_PASSWORD    
