@@ -3,6 +3,7 @@ pipeline:
     image: maven
     secrets: [ artifactory_password, ARTIFACTORY_USER, ARTIFACTORY_URL, maven_repo_key ]
     commands:
+    # Download the JFrog CLI 
       - curl -fL https://getcli.jfrog.io | sh
       - ./jfrog rt config --url=$ARTIFACTORY_URL --user=$ARTIFACTORY_USER --password=$ARTIFACTORY_PASSWORD
       - ./jfrog rt c show
