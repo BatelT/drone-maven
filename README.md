@@ -14,4 +14,4 @@ Place a .drone.yml file in the root of your project, as used in this sample proj
 
 #### Step 3:
 View the published artifacts and build information in Artifactory.
-![screenshot](img/Screen_Shot2.png)
+![screenshot](img/ScreenShot2.png)
