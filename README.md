@@ -10,7 +10,7 @@ In the Maven project, configure the following Artifactory credentials, under CI/
 ![screenshot](img/ScreenShot1.png)
 
 #### Step 2:
-Place a .gitlab-ci.yml file in the root of your project, as used in this sample project.
+Place a .drone.yml file in the root of your project, as used in this sample project.
 
 #### Step 3:
 View the published artifacts and build information in Artifactory.
