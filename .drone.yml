@@ -8,6 +8,6 @@ pipeline:
       - ./jfrog rt c show
       - export M2_HOME=/usr/share/maven
       - sed -i 's,MAVEN_REPO_KEY,'"$MAVEN_REPO_KEY"',g' configuration.yml
-      - ./jfrog rt mvn "clean install" configuration.yml --build-name=Drone_Maven_demo --build-number=1.0.5
-      - ./jfrog rt bce Drone_Maven_demo 1.0.5
-      - ./jfrog rt bp Drone_Maven_demo 1.0.5
+      - ./jfrog rt mvn "clean install" configuration.yml --build-name=Drone_Maven_demo --build-number=1.1.0
+      - ./jfrog rt bce Drone_Maven_demo 1.1.0
+      - ./jfrog rt bp Drone_Maven_demo 1.1.0
