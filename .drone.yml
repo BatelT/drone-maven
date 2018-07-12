@@ -5,10 +5,7 @@ pipeline:
       - ARTIFACTORY_URL=https://batelt.jfrog.io/batelt
       - ARTIFACTORY_PASS=drone2018
       - MAVEN_REPO_KEY=libs-snapshot 
-    secrets:
-      - arti_user: $$art-user
-      - arti_pass: artifactory_pass
-      - arti_url: artifactory_url
+    secrets: [ artifactory_password, art-user ]
     commands:
       - echo $arti_user
       - curl -fL https://getcli.jfrog.io | sh
