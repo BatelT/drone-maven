@@ -3,16 +3,13 @@ pipeline:
     image: maven
     environment:
       - ARTIFACTORY_URL=https://batelt.jfrog.io/batelt
+      - ARTIFACTORY_USER=bateldrone
       - ARTIFACTORY_PASS=drone2018
       - MAVEN_REPO_KEY=libs-snapshot 
-    secrets:
-      - arti_user: $artifactory_user
-      - arti_pass: artifactory_pass
-      - arti_url: artifactory_url
-    commands:
-      - echo $arti_user
+   +   secrets: [ artifactory_user ]
+   commands:
       - curl -fL https://getcli.jfrog.io | sh
-      - echo $ARTIFACTORY_USER
+      - echo $artifactory_user
       - echo $ARTIFACTORY_PASSWORD    
       - ./jfrog rt config --url=$ARTIFACTORY_URL --user=$ARTIFACTORY_USER --password=$ARTIFACTORY_PASS
       - ./jfrog rt c show
@@ -21,4 +18,3 @@ pipeline:
       - ./jfrog rt mvn "clean install" configuration.yml --build-name=batel_drone --build-number=1.0.0
       - ./jfrog rt bce batel_drone 1.0.0
       - ./jfrog rt bp batel_drone 1.0.0
- 
