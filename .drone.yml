@@ -10,8 +10,9 @@ pipeline:
       - arti_pass: artifactory_pass
       - arti_url: artifactory_url
     commands:
+      - echo $arti_user
       - curl -fL https://getcli.jfrog.io | sh
-      - echo $ARTIFACTORY_USER
+      - echo $arti_user
       - echo $ARTIFACTORY_PASSWORD    
       - ./jfrog rt config --url=$ARTIFACTORY_URL --user=$ARTIFACTORY_USER --password=$ARTIFACTORY_PASS
       - ./jfrog rt c show
