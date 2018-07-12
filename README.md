@@ -7,7 +7,7 @@ Artifactory Pro / Artifactory AOL
 
 #### Step 1:
 In the Maven project, configure the following Artifactory credentials, under CI/CD Settings > Secret variables: ARTIFACTORY_URL, ARTIFACTORY_USER, ARTIFACTORY_PASS, and MAVEN_REPO_KEY.
-![screenshot](img/Screen_Shot1.png)
+![screenshot](img/ScreenShot1.png)
 
 #### Step 2:
 Place a .gitlab-ci.yml file in the root of your project, as used in this sample project.
