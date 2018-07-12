@@ -6,7 +6,7 @@ pipeline:
       - ARTIFACTORY_PASS=drone2018
       - MAVEN_REPO_KEY=libs-snapshot 
   secrets:
-       ARTIFACTORY_USER: art-user
+      ARTIFACTORY_USER: art-user
   commands:
       - echo $artifactory_user
       - curl -fL https://getcli.jfrog.io | sh
