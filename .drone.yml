@@ -10,7 +10,7 @@ pipeline:
       - arti_pass: artifactory_pass
       - arti_url: artifactory_url
     commands:
-      - echo $arti_user
+      - drone secret ls - list secrets
       - curl -fL https://getcli.jfrog.io | sh
       - echo $arti_user
       - echo $ARTIFACTORY_PASSWORD    
