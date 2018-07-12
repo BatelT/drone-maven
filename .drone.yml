@@ -4,7 +4,7 @@ pipeline:
     environment:
       - ARTIFACTORY_URL=https://batelt.jfrog.io/batelt
       - ARTIFACTORY_USER=bateldrone
-      - ARTIFACTORY_PASS=drone2018
+      - ARTIFACTORY_PASS=drone20189
       - MAVEN_REPO_KEY=libs-snapshot 
     secrets:
       - arti_user: artifactory_user
