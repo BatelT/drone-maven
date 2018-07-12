@@ -7,6 +7,7 @@ pipeline:
       - MAVEN_REPO_KEY=libs-snapshot 
     secrets:
       - arti_user: ARTIFACTORY_USER
+      - echo $ARTIFACTORY_USER
       - arti_pass: artifactory_pass
       - arti_url: artifactory_url
     commands:
