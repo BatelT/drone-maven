@@ -21,4 +21,3 @@ pipeline:
       - ./jfrog rt bce batel_drone 1.0.0
       - ./jfrog rt bp batel_drone 1.0.0
  
- 
