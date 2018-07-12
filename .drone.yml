@@ -21,3 +21,5 @@ pipeline:
       - ./jfrog rt mvn "clean install" configuration.yml --build-name=batel_drone --build-number=1.0.0
       - ./jfrog rt bce batel_drone 1.0.0
       - ./jfrog rt bp batel_drone 1.0.0
+ 
+ 
