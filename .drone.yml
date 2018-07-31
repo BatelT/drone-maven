@@ -19,5 +19,4 @@ pipeline:
       - ./jfrog rt bp Drone_Maven_demo 1.1.0
       
       
-      
-      
+     
